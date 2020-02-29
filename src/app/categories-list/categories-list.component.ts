@@ -20,19 +20,19 @@ export class CategoriesListComponent implements OnInit {
     this.categories = [
       {
         "name": "Most Popular",
-        "__typename": "LobbyCategory"
+        "slug": "most-popular"
       },
       {
         "name": "Video Slot",
-        "__typename": "LobbyCategory"
+        "slug": "video-slots"
       },
       {
-        "name": "Table Categories",
-        "__typename": "LobbyCategory"
+        "name": "Table Games",
+        "slug": "table-games"
       },
       {
-        "name": "Jackpot Categories",
-        "__typename": "LobbyCategory"
+        "name": "Jackpot Games",
+        "slug": "jackpot-games"
       }
     ]
     // this.apollo

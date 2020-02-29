@@ -7,7 +7,9 @@
   </div>
   <ul *ngIf="categories" class="categories">
     <li *ngFor="let category of categories" class="categories__category">
-      <p>{{category.name}}</p>
+      <a [routerLink]="['/categories', category.slug]" routerLinkActive="router-link-active" >
+        {{ category.name }}
+      </a>
     </li>
   </ul>
 </div>
