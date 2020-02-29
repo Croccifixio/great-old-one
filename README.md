@@ -1,4 +1,4 @@
-# Great Old One
+# Great Old One [![Netlify Status](https://api.netlify.com/api/v1/badges/d5083165-1ca5-4ed1-ba61-d3a4d38de03f/deploy-status)](https://app.netlify.com/sites/hardcore-easley-978f83/deploys)
 
 ![エクスカリバー](https://www.pngitem.com/pimgs/m/417-4172362_transparent-black-star-soul-eater-png-draw-excalibur.png)
 
