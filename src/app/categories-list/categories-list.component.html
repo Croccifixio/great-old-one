@@ -1,0 +1,13 @@
+<div class="categories__wrapper">
+  <div *ngIf="loading">
+    Loading...
+  </div>
+  <div *ngIf="error">
+    Error :(
+  </div>
+  <ul *ngIf="categories" class="categories">
+    <li *ngFor="let category of categories" class="categories__category">
+      <p>{{category.name}}</p>
+    </li>
+  </ul>
+</div>

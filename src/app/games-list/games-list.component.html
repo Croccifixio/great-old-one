@@ -1,0 +1,11 @@
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="error">
+  Error :(
+</div>
+<div *ngIf="games">
+  <div *ngFor="let game of games">
+    <p>{{game.name}}</p>
+  </div>
+</div>

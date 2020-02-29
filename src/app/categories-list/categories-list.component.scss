@@ -1,0 +1,9 @@
+.categories {
+  display: flex;
+  list-style: none;
+
+  &__category {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
