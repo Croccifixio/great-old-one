@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Fibon Neue Rounded';
+  font-weight: 400;
+  src: url(assets/fonts/FibonNeueRND-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Fibon Neue Rounded';
+  font-weight: 700;
+  src: url(assets/fonts/FibonNeueRND-Bold.woff) format('woff');
+}
+
+body {
+  font-family: 'Fibon Neue Rounded', sans-serif;
+}
