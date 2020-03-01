@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleHamburgerMenu(): void {
-    console.log('toggleHamburgerMenu')
     this.isHamburgerOpen = !this.isHamburgerOpen
   }
 
