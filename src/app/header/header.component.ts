@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.setHamburgerVisibility()
+    this.watchResize()
   }
 
   toggleHamburgerMenu(): void {
