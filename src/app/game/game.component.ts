@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
-import { fromEvent } from 'rxjs'
-import { debounceTime, tap } from 'rxjs/operators'
+import { tap } from 'rxjs/operators'
+import { windowResize$ } from '../../utils';
 import { Game } from '../../types';
 
 type Response = {
@@ -72,13 +72,12 @@ export class GameComponent implements OnInit {
   }
 
   setLayout() {
-    this.layout = window.innerWidth < 400 ? 'mobile' : 'desktop'
+    this.layout = window.innerWidth <= 400 ? 'mobile' : 'desktop'
   }
 
   watchResize() {
-    const resize$ = fromEvent(window, 'resize').pipe(
-      debounceTime(300),
-      tap(this.setLayout)
+    const resize$ = windowResize$.pipe(
+      tap(() => this.setLayout())
     )
 
     resize$.subscribe()

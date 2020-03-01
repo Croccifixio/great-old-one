@@ -4,7 +4,21 @@
       <img src="assets/images/logo.png" alt="">
     </a>
     <div class="header__links">
-      <app-categories-list></app-categories-list>
+      <button
+        *ngIf="isHamburgerVisible"
+        [className]="isHamburgerOpen ? 'open' : ''"
+        (click)="toggleHamburgerMenu()"
+        class="header__hamburger-button"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <app-categories-list
+        [isHamburgerOpen]=isHamburgerOpen
+        [isHamburgerVisible]=isHamburgerVisible
+      ></app-categories-list>
     </div>
   </nav>
 </header>

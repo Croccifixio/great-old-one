@@ -3,6 +3,59 @@
   margin-right: auto;
   max-width: 1500px;
 
+  &__hamburger-button {
+    background: none;
+    border: none;
+    display: inline-block;
+    height: 30px;
+    outline: none;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    width: 40px;
+    cursor: pointer;
+    span {
+      background: black;
+      border-radius: 9px;
+      display: block;
+      height: 6px;
+      left: 0;
+      opacity: 1;
+      position: absolute;
+      transform: rotate(0deg);
+      transition: .25s ease-in-out;
+      width: 100%;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2), &:nth-child(3) {
+        top: 12px;
+      }
+      &:nth-child(4) {
+        top: 24px;
+      }
+    }
+
+    &.open span {
+      &:nth-child(1) {
+        left: 50%;
+        top: 18px;
+        width: 0%;
+      }
+      &:nth-child(2) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+      }
+      &:nth-child(4) {
+        left: 50%;
+        top: 18px;
+        width: 0%;
+      }
+    }
+  }
+
   &__logo {
     height: 70px;
     img {

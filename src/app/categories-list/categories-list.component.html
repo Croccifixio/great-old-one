@@ -5,7 +5,14 @@
   <div *ngIf="error">
     Error :(
   </div>
-  <ul *ngIf="categories" class="categories__list">
+  <ul
+    *ngIf="categories"
+    [ngClass]="{
+      'categories__list--hamburger': isHamburgerVisible,
+      'categories__list--open': isHamburgerOpen
+    }"
+    class="categories__list"
+  >
     <li *ngFor="let category of categories" class="categories__category">
       <a [routerLink]="['/categories', category.slug]" routerLinkActive="router-link-active" >
         {{ category.name }}

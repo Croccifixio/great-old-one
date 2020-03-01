@@ -5,7 +5,7 @@
   <div *ngIf="layout === 'mobile'" class="game__thumbnail">
     <img [src]="game.thumbnail" alt="">
   </div>
-  <h1 class="game__title">{{ game.name }}</h1>
+  <h1 class="game__title">{{ layout }}</h1>
   <div [innerHTML]="game.descriptionLong" class="game__description"></div>
   <div class="game__cta">
     <a [routerLink]="['/oh-no']" class="game__button">Play Now</a>

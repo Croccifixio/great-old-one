@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
 
@@ -9,6 +9,8 @@ import gql from 'graphql-tag';
 })
 export class CategoriesListComponent implements OnInit {
 
+  @Input() isHamburgerOpen: boolean;
+  @Input() isHamburgerVisible: boolean;
   categories: any[];
   loading = true;
   error: any;
