@@ -27,23 +27,24 @@ export class CategoriesListComponent implements OnInit {
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
-    this.apollo
-      .watchQuery<Response>({
-        query: gql`
-          {
-            lobby(slug: "casino") {
-              categoryConnection {
-                categories {
-                  name
-                }
-              }
-            }
-          }
-        `,
-      })
-      .valueChanges.subscribe(result => {
-        this.categories = result?.data?.lobby?.categoryConnection?.categories;
-      });
+    this.categories = [
+      {
+        "name": "Most Popular",
+        "slug": "most-popular"
+      },
+      {
+        "name": "Video Slot",
+        "slug": "video-slots"
+      },
+      {
+        "name": "Table Games",
+        "slug": "table-games"
+      },
+      {
+        "name": "Jackpot Games",
+        "slug": "jackpot-games"
+      }
+    ]
   }
 
 }
