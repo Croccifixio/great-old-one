@@ -1,0 +1,28 @@
+article {
+  max-width: 50rem;
+  margin: 5rem auto;
+  position: relative;
+  text-align: center;
+  &::before {
+    background-color: #852031;
+    content: '';
+    height: 200vh;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200vw;
+    z-index: -1;
+  }
+}
+
+img {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}

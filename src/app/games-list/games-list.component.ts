@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Apollo} from 'apollo-angular';
 import gql from 'graphql-tag';
+import { Game } from '../../types';
 
 type Response = {
   lobby: {
@@ -11,12 +12,7 @@ type Response = {
         slug: string
       }]
     }
-    games: [{
-      categories: string[]
-      name: string
-      slug: string
-      thumbnail: string
-    }]
+    games: Partial<Game>[]
   }
 }
 
@@ -27,7 +23,7 @@ type Response = {
 })
 export class GamesListComponent implements OnInit {
 
-  games: any[];
+  games: Partial<Game>[];
   loading = true;
   error: any;
 

@@ -1,0 +1,13 @@
+<div class="game">
+  <div *ngIf="layout === 'desktop'" class="game__background">
+    <img [src]="game.background" alt="">
+  </div>
+  <div *ngIf="layout === 'mobile'" class="game__thumbnail">
+    <img [src]="game.thumbnail" alt="">
+  </div>
+  <h1 class="game__title">{{ game.name }}</h1>
+  <div [innerHTML]="game.descriptionLong" class="game__description"></div>
+  <div class="game__cta">
+    <a [routerLink]="['/oh-no']" class="game__button">Play Now</a>
+  </div>
+</div>

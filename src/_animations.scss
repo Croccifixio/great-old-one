@@ -1,0 +1,11 @@
+@keyframes bg-slide {
+  from {
+    background-position-x: 100%;
+  }
+  // 20% {
+  //   background-position-x: 95%;
+  // }
+  to {
+    background-position-x: 170%;
+  }
+}

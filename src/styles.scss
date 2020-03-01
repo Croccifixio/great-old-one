@@ -7,9 +7,15 @@
 @font-face {
   font-family: 'Fibon Neue Rounded';
   font-weight: 700;
-  src: url(assets/fonts/FibonNeueRND-Bold.woff) format('woff');
+  src: url(assets/fonts/FibonNeueRND-ExtraBold.woff) format('woff');
 }
 
 body {
   font-family: 'Fibon Neue Rounded', sans-serif;
+}
+
+.oh-no {
+  .categories__category a {
+    color: white !important;
+  }
 }

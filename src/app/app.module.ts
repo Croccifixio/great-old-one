@@ -10,6 +10,8 @@ import { GamesListComponent } from './games-list/games-list.component';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
 import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
+import { GameComponent } from './game/game.component';
+import { OhNoComponent } from './oh-no/oh-no.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CardComponent } from './card/card.component';
     GamesListComponent,
     CategoriesListComponent,
     HeaderComponent,
-    CardComponent
+    CardComponent,
+    GameComponent,
+    OhNoComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +31,8 @@ import { CardComponent } from './card/card.component';
     RouterModule.forRoot([
       { path: '', component: GamesListComponent },
       { path: 'categories/:categorySlug', component: GamesListComponent },
+      { path: 'game/:gameSlug', component: GameComponent },
+      { path: 'oh-no', component: OhNoComponent },
     ])
   ],
   providers: [],
