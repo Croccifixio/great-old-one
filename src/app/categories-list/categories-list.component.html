@@ -1,11 +1,11 @@
-<div class="categories__wrapper">
+<div class="categories">
   <div *ngIf="loading">
     Loading...
   </div>
   <div *ngIf="error">
     Error :(
   </div>
-  <ul *ngIf="categories" class="categories">
+  <ul *ngIf="categories" class="categories__list">
     <li *ngFor="let category of categories" class="categories__category">
       <a [routerLink]="['/categories', category.slug]" routerLinkActive="router-link-active" >
         {{ category.name }}

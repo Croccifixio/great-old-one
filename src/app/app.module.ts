@@ -9,13 +9,15 @@ import { GraphQLModule } from './graphql.module';
 import { GamesListComponent } from './games-list/games-list.component';
 import { CategoriesListComponent } from './categories-list/categories-list.component';
 import { HeaderComponent } from './header/header.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesListComponent,
     CategoriesListComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

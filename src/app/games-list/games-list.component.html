@@ -1,11 +1,20 @@
-<div *ngIf="loading">
-  Loading...
-</div>
-<div *ngIf="error">
-  Error :(
-</div>
-<div *ngIf="games">
-  <div *ngFor="let game of games">
-    <p>{{game.name}}</p>
+<div class="games">
+  <div *ngIf="loading">
+    Loading...
   </div>
+  <div *ngIf="error">
+    Error :(
+  </div>
+  <ul *ngIf="games" class="games__list">
+    <li *ngFor="let game of games" class="games__game">
+      <article>
+        <app-card
+          [img]="game.thumbnail"
+          [link]="game.slug"
+          [title]="game.name"
+        ></app-card>
+      </article>
+    </li>
+  </ul>
+
 </div>

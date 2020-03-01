@@ -1,0 +1,39 @@
+.card {
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 30px;
+  max-width: 1300px;
+  overflow: hidden;
+  text-decoration: none;
+
+  &__content {
+    border: 2px solid #ccc;
+    border-top: none;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 15px 20px;
+  }
+
+  &__image {
+    background-color: #ccc;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    img {
+      height: 100%;
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      &[src*='placeholder'] {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__title {
+    color: #000;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
