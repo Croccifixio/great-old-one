@@ -23,8 +23,6 @@ export class CategoriesListComponent implements OnInit {
   @Input() isHamburgerOpen: boolean;
   @Input() isHamburgerVisible: boolean;
   categories: any[];
-  loading = true;
-  error: any;
 
   constructor(private apollo: Apollo) {}
 
@@ -45,8 +43,6 @@ export class CategoriesListComponent implements OnInit {
       })
       .valueChanges.subscribe(result => {
         this.categories = result?.data?.lobby?.categoryConnection?.categories;
-        this.loading = result.loading;
-        this.error = result.errors;
       });
   }
 

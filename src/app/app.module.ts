@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { CardComponent } from './card/card.component';
 import { GameComponent } from './game/game.component';
 import { OhNoComponent } from './oh-no/oh-no.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { OhNoComponent } from './oh-no/oh-no.component';
     HeaderComponent,
     CardComponent,
     GameComponent,
-    OhNoComponent
+    OhNoComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
